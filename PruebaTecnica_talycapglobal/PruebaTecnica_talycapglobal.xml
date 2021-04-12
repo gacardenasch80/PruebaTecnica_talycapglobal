@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PruebaTecnica_talycapglobal</name>
+    </assembly>
+    <members>
+        <member name="M:PruebaTecnica_talycapglobal.Authorization.IJwt.GetToken(PruebaTecnica_talycapglobal.Data.Model.User)">
+            <summary>
+            Funcion que obtiene el token con jwt
+            </summary>
+            <param name="user">Objeto user</param>
+            <returns>string con token</returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Authorization.Jwt.#ctor(Microsoft.Extensions.Options.IOptions{PruebaTecnica_talycapglobal.Model.AppSettings})">
+            <summary>
+            Constructor de la clase Jwt
+            </summary>
+            <param name="appSettings">Cadena de conexion</param>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Authorization.Jwt.GetToken(PruebaTecnica_talycapglobal.Data.Model.User)">
+            <summary>
+            Funcion que obtiene el token con jwt
+            </summary>
+            <param name="user">Objeto user</param>
+            <returns>string con token</returns>
+        </member>
+        <member name="T:PruebaTecnica_talycapglobal.Controllers.AuthorsController">
+            <summary>
+            Controlador AuthorsController
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.#ctor(PruebaTecnica_talycapglobal.Service.Server.Interface.IAuthorService)">
+            <summary>
+            Controller constructor
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.GetAll">
+            <summary>
+            Returns the complete list of Authors in the database
+            </summary>
+            <returns>Author list</returns>
+            <response code="200">Returns the get item</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.GetById(System.Int32)">
+            <summary>
+            Function to get a Author by id
+            </summary>
+            <param name="id">Author identifier</param>
+            <returns>Author object with the information</returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.GetCount">
+            <summary>
+            Function to get a Author count
+            </summary>
+            <returns>Author object with the information</returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.Post(PruebaTecnica_talycapglobal.Data.Model.Author)">
+            <summary>
+            Function to create a new Author
+            </summary>
+            <param name="Author">Rol JSON object with all information</param>
+            <returns>Expense type list</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.PostSync">
+            <summary>
+            Function to create a new Author
+            </summary>
+            <param name="Author">Rol JSON object with all information</param>
+            <returns>Expense type list</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.Put(PruebaTecnica_talycapglobal.Data.Model.Author)">
+            <summary>
+            Function to update a Author
+            </summary>
+            <param name="Author">Rol JSON object with all information to update</param>
+            <returns>True if the update is correct; otherwise it is false</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+            <response code="404">Id not found</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.AuthorsController.Delete(System.Int32)">
+            <summary>
+            Function to delete a Author by id
+            </summary>
+            <param name="id">Author by id</param>
+            <returns>True if the deletion is correct; otherwise it is false</returns>
+            <response code="200">Returns the get item</response>
+            <response code="404">Id is not found</response>
+        </member>
+        <member name="T:PruebaTecnica_talycapglobal.Controllers.BooksController">
+            <summary>
+            Controlador BooksController
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.#ctor(PruebaTecnica_talycapglobal.Service.Server.Interface.IBookService)">
+            <summary>
+            Controller constructor
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.GetAll">
+            <summary>
+            Returns the complete list of books in the database
+            </summary>
+            <returns>Book list</returns>
+            <response code="200">Returns the get item</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.GetBookAuthorsAll">
+            <summary>
+            Returns the complete list of rols in the database
+            </summary>
+            <returns>Rol list</returns>
+            <response code="200">Returns the get item</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.GetById(System.Int32)">
+            <summary>
+            Function to get a book by id
+            </summary>
+            <param name="id">Book identifier</param>
+            <returns>Rol object with the information</returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.GetCount">
+            <summary>
+            Function to get a rol by id
+            </summary>
+            <param name="id">Book identifier</param>
+            <returns>Rol object with the information</returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.Post(PruebaTecnica_talycapglobal.Data.Model.Book)">
+            <summary>
+            Function to create a new rol
+            </summary>
+            <param name="rol">Rol JSON object with all information</param>
+            <returns>Expense type list</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.Put(PruebaTecnica_talycapglobal.Data.Model.Book)">
+            <summary>
+            Function to update a rol
+            </summary>
+            <param name="book">Rol JSON object with all information to update</param>
+            <returns>True if the update is correct; otherwise it is false</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+            <response code="404">Id not found</response>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.BooksController.Delete(System.Int32)">
+            <summary>
+            Function to delete a rol by id
+            </summary>
+            <param name="id">Rol by id</param>
+            <returns>True if the deletion is correct; otherwise it is false</returns>
+            <response code="200">Returns the get item</response>
+            <response code="404">Id is not found</response>
+        </member>
+        <member name="T:PruebaTecnica_talycapglobal.Controllers.LoginController">
+            <summary>
+            Controlador LoginController
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.LoginController.#ctor(PruebaTecnica_talycapglobal.Service.Server.Interface.ILoginService,PruebaTecnica_talycapglobal.Authorization.IJwt)">
+            <summary>
+            Controller constructor
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.LoginController.GetLogin(System.String,System.String)">
+            <summary>
+            Funcion encargada de realizar la validaciones de credenciales en el sistema
+            </summary>
+            <param name="userName">Nombre de usuarios</param>
+            <param name="passWord">Password</param>
+            <returns></returns>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Controllers.LoginController.GetUsersCount">
+            <summary>
+            Funcion que se encarga de devolver la cantidad de usuarios en el sistema
+            </summary>
+            <returns>Cantidad de usuarios</returns>
+        </member>
+        <member name="T:PruebaTecnica_talycapglobal.Model.AppSettings">
+            <summary>
+            Clase AppSettings
+            </summary>
+        </member>
+        <member name="P:PruebaTecnica_talycapglobal.Model.AppSettings.Secret">
+            <summary>
+            Semilla para encriptar 
+            </summary>
+        </member>
+        <member name="T:PruebaTecnica_talycapglobal.Startup">
+            <summary>
+            Clase Startup
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_talycapglobal.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>
