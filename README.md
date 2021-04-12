@@ -2,19 +2,20 @@
 Respositorio publico con  servicio rest API .net.  Solucion para prueba tecnica para TalycapGroup (Abril 2021)
 
 # Especificaciones
-1. Este proyecto trabaja con with .Net Core 3.1 y Dapper
-2. PruebaTecnica_talycapglobal: Es un proyecto Rest API que se conecta a un servicio externo https://fakerestapi.azurewebsites.net/index.html
-3. PruebaTecnica_talycapglobal.Service: Proyecto que implementa el crud del modelo con Dapper
-4. PruebaTecnica_talycapglobal.Data: Capa de Entidades
-5. PruebaTecnica_talycapglobal.Repository: Repositorio 
-6. PruebaTecnica_talycapglobal.UnitOfWork: Unidad de Trabajo
+La prueba tecnica se desarrollo con una arquitectura en capas Implementando 4 capas las cuales son:
+1. Capa de Aplicación (UI): Esta capa fue desarrollada con el framework Angular el cual implementa un patrón de diseño MVC sobre una single page aplication
+2. Rest API: Capa de servicio que implementa la arquitectura RestFull, con la implementación JWT como protocolo de autenticación y autorización y Swagger para la documentación del API Rest
+3. Capa de Negocio: En esta capa se implementa toda la logica del negocio a traves de la implementación de interfaces de servicio que proveen metodos y funciones publicos que seran llamados desde el Api
+4. Data: Esta capa es la encargada de la comunicación con la base de datos por medio de un micro ORM llamado Dapper y la implementación de patron de diseño de repositorio y unidad de trabajo. 
+Adicionalmente se implementa los patrones de inyección de dependencias y singleton permitiendo asi que la aplicación sea escalable y desacoplada siguiendo con los principios SOLID.
 
 # Tiempo Gastado
 El tiempo aproximado para crear la solucion fue de 30 horas
 
 ## Prerequisitos
-.Net Core 3.1
-MS SQL Server 
+Visual Studio 2019 Backend
+Visual Studio Code FrontEnd
+Sql Server manejo de la base de datos con un usuario que tenga permisos de creación de bases de datos, roles y sericios.
 
 ## Instalación
 1. Abra la carpeta de la solución en la explorador de archivos
